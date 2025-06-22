@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mo Designs</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div id="header">
+        <video autoplay muted loop playsinline class="background-video">
+            <source src="stars.mp4" type="video/mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div id="logo">
+            <img src="logo.png" alt="Logo" id="logo-img">
+        </div>
+        <div id="tdiv">
+            <h1>Mo Designs</h1>
+        </div>
+        <ul id="main-menu">
+            <li onclick="toggleMenu()">Menu
+                <ul id="submenu">
+                    <li>Ankara Design</li>
+                    <li>Modern Designs</li>
+                    <li>Sleeveless</li>
+                </ul>
+            </li>
+            <li><a href="#About">About</a></li>
+            <li>Tour</li>
+            <li><a href="#Contact">Contact</a></li>
+        </ul>
+    </div>
+    <div id="details">
+        <div id="background-image-container"></div>
+        <div id="content-container">
+            <div id="pictures" class="column large">
+                <div id="datetime-location"></div>
+                <div id="About">
+                    <h2 class="ta section-title">About Us:</h2>
+                    <p class="contact-list"> Mo International Designs!
+                        At Mo Designs, we believe that every baby deserves the best,
+                        and every woman is aqueen.She deserves affordable, high-quality options.
+                        We specialize in<span> excellent and creative designs with a perfect sew, </span>,
+                        As a passionate and creative women’s fashion designer, we specialize in crafting outfits
+                        that are not just stylish, but tailored perfectly to each individual.
+                        With just a look, we can envision the ideal design that enhances your beauty 
+                        and suits your unique personality. Whether you're preparing for a glamorous party, 
+                        a casual outing, or a cultural celebration, we create fashion that speaks to the occasion.
+                        Our work blends the elegance of American trends with the richness of African styles, 
+                        resulting in outfits that are bold, timeless, and international. 
+                        In addition to bespoke designs, we also offer ready-made wear for clients who prefer 
+                        quick and fashionable choices—without compromising on style or quality.
+                        Driven by creativity and shaped by global exposure, every piece we design is a reflection of 
+                        our dedication to making women feel confident, beautiful, and authentically themselves.</p>
+                </div>
+                <h2>Pictures and Videos(......coming soon)</h2><br>
+                <!-- List of pictures and videos -->
+            </div>
+            <div class="column">
+                <div id="Contact">
+                    <h2 class="ta section-title">Contact Us</h2>
+                    <ul class="contact-list">
+                        <li><strong>Address:</strong><br>
+                            264 Aspen Knols Way<br>
+                            Staten Island<br>
+                            New York<br>
+                            U.S.A</li>
+                        <li><strong>E-mail:</strong>
+                            modesigns4me@<br>
+                            yahoo.com</li>
+                        <li><strong>Tel:</strong><br>
+                            +13475964919</li>
+                        <li><strong>website:</strong><br>
+                            www.modesign.com</li>
+                    </ul>
+                    <div class="social-m">
+                        <h3>Follow us </h3>
+                        <ul class="contact-list">
+                            <li><a href="https://www.facebook.com/Medina Keshiro" target="_blank">
+  Visit My Facebook Page
+</a></li>
+                            <li><a href="https://www.instagram.com/medinakeshiro" target="_blank">
+                             Visit My Instagram
+                            </a></li>
+                            <li><a href="#">x</a></li>
+                            <li><a href="#">Drums</a></li>
+                        </ul>
+                        <h3>Business-Hours</h3>
+                        <ul class="contact-list business-hours">
+                            <li>Mon-Friday: 9am - 7pm</li>
+                            <li>Saturday: 9am - 8pm</li>
+                            <li>Sunday: closed</li>
+                        </ul>
+                        <h3>Frequently Asked Questions</h3>
+                        <ul class="contact-list fq">
+                            <li><strong>Q: Do you offer home delivery?</strong><br>
+                                A: Yes, we offer convenient home delivery services.</li>
+                            <li><strong>Q: How can I track my order?</strong><br>
+                                A: You will receive a tracking number via email
+                                once your order has been shipped.</li>
+                        </ul>
+                    </div>
+                    <h3>Our Location</h3>
+                    <div id="map"></div>
+                </div>
+            </div>
+            <div id="contact" class="column">
+                <form action="Mo.php" method="post">
+                    <label for="name">Name:</label>
+                    <input type="text" id="name" name="name"><br><br>
+                
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email"><br><br>
+                
+                    <label for="your-message">Your Message:</label><br><br>
+                    <textarea id="your-message" name="your-message" rows="4" cols="50"></textarea><br><br>
+                
+                    <input type="submit" value="Submit">
+                </form>                
+                
+                <div id="newArrivals">New Arrivals!</div>
+            </div>
+        </div>
+    </div>
+    <script src="Mo.scripts.js"></script>
+</body>
+
+</html>
