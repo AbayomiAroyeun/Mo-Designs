@@ -71,3 +71,13 @@ window.onload = () => {
     displayDateTimeLocation();
     loadMapScript();
 };
+
+function collection(){
+
+};
+function customized(){
+    
+};
+function ready(){
+    
+};
