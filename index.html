@@ -2,135 +2,164 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mo Designs</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Medinat Keshiro Designs</title>
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="styles.css" />
+
+  <!-- Main script (loads last, but before Maps) -->
+  
 </head>
 
 <body>
-    <div id="header">
-        <video autoplay muted loop playsinline class="background-video">
-            <source src="stars.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-        <div id="logo">
-            <img src="image/logo.jpg" alt="Logo" id="logo-img">
-        </div>
-        <div id="tdiv">
-            <h1>Mo Designs</h1>
-        </div>
-        <ul id="main-menu">
-            <li onclick="toggleMenu()">Menu
-                <ul id="submenu">
-                    <li><a href="#Ready">Ready to Wear</a></li>
-                    <li><a href="#Customized">Customize Wear</a></li>
-                    <li><a href="#Collections">Our Collections</a></li>
-                </ul>
-            </li>
-            <li><a href="#About">About</a></li>
-            <li>Tour</li>
-            <li><a href="#Contact">Contact</a></li>
-        </ul>
+  <!-- ─────────────────── TOP BAR ─────────────────── -->
+  <header id="top-header">
+    <div class="social-icons">
+      <a href="https://wa.me/13475964919" target="_blank" aria-label="WhatsApp">
+        <img src="image/whatsapp-icon.png" alt="WhatsApp" width="30" />
+      </a>
+      <a href="https://www.facebook.com/share/1Faj4Qh5Pv/" target="_blank" aria-label="Facebook">
+        <img src="image/facebook-icon.png" alt="Facebook" width="30" />
+      </a>
+      <a href="https://www.instagram.com/medinakeshiro" target="_blank" aria-label="Instagram">
+        <img src="image/instagram-icon.png" alt="Instagram" width="30" />
+      </a>
+      <a href="https://www.tiktok.com/@medina_keshiro" target="_blank" aria-label="TikTok">
+        <img src="image/tiktok-icon.png" alt="TikTok" width="30" />
+      </a>
     </div>
-    <div id="details">
-        <div id="background-image-container"></div>
-        <div id="content-container">
-            <div id="pictures" class="column large">
-                <div id="datetime-location"></div>
-                <div id="About">
-                    <h2 class="ta section-title">About Us:</h2>
-                    <p class="contact-list"> Mo International Designs!
-                        At Mo Designs, we believe that every baby deserves the best,
-                        and every woman is aqueen.She deserves affordable, high-quality options.
-                        We specialize in<span> excellent and creative designs with a perfect sew, </span>,
-                        As a passionate and creative women’s fashion designer, we specialize in crafting outfits
-                        that are not just stylish, but tailored perfectly to each individual.
-                        With just a look, we can envision the ideal design that enhances your beauty 
-                        and suits your unique personality. Whether you're preparing for a glamorous party, 
-                        a casual outing, or a cultural celebration, we create fashion that speaks to the occasion.
-                        Our work blends the elegance of American trends with the richness of African styles, 
-                        resulting in outfits that are bold, timeless, and international. 
-                        In addition to bespoke designs, we also offer ready-made wear for clients who prefer 
-                        quick and fashionable choices—without compromising on style or quality.
-                        Driven by creativity and shaped by global exposure, every piece we design is a reflection of 
-                        our dedication to making women feel confident, beautiful, and authentically themselves.</p>
-                </div>
-                <h2 id="Collections">Our Collections</h2><br>
-                <h2 id="Ready">Ready to Wear</h2><br>
-                <h2 id="Customized">Customized</h2><br>
-            </div>
-            <div class="column">
-                <div id="Contact">
-                    <h2 class="ta section-title">Contact Us</h2>
-                    <ul class="contact-list">
-                        <li><strong>Address:</strong><br>
-                            268 Aspen Knols Way<br>
-                            Staten Island<br>
-                            New York<br>
-                            U.S.A</li><br>
-                        <li><a href="mailto:mkdesignsbymo@gmail.com" target="_blank">
-                            <img src="image/mail-icon.png" style="width: 30px;"><br></a></li>
-                        <li><a href="https://wa.me/13475964919" target="blank">
-                            <img src="image/whatsapp-icon.png" style="width: 30px;">
-                        </a><br>
-                            </li>
-                        <li><a href="sms:+13475964919?body=Hello,are you available now?">sms</a><span>
-                        <a href="tel:"><img src="image/call-icon.png" style="width: 30px;"></span></a>
-                        </li>
-                    </ul>
-                    <div class="social-m">
-                        <h3>Follow us </h3>
-                        <ul class="contact-list">
-                            <li><a href="https://www.facebook.com/share/1Faj4Qh5Pv/" target="_blank">
-                            <img src="image/facebook-icon.png" style="width: 30px;">
-                            </a></li>
-                            <li><a href="https://www.instagram.com/medinakeshiro" target="_blank">
-                             <img src="image/instagram-icon.png" style="width: 30px;">
-                            </a></li>
-                            <li><a href="https://www.tiktok.com/@medina_keshiro" target="_blank">
-                                <img src="image/tiktok-icon.png" style="width: 30px;">
-                            </a></li>
-                            <li><a href="#">Drums</a></li>
-                        </ul>
-                        <h3>Business-Hours</h3>
-                        <ul class="contact-list business-hours">
-                            <li>Mon-Friday: 9am - 7pm</li>
-                            <li>Saturday: 9am - 8pm</li>
-                            <li>Sunday: closed</li>
-                        </ul>
-                        <h3>Frequently Asked Questions</h3>
-                        <ul class="contact-list fq">
-                            <li><strong>Q: Do you offer home delivery?</strong><br>
-                                A: Yes, we offer convenient home delivery services.</li>
-                            <li><strong>Q: How can I track my order?</strong><br>
-                                A: You will receive a tracking number via email
-                                once your order has been shipped.</li>
-                        </ul>
-                    </div>
-                    <h3>Our Location</h3>
-                    <div id="map"></div>
-                </div>
-            </div>
-            <div id="contact" class="column">
-                <form action="Mo.php" method="post">
-                    <label for="name">Name:</label>
-                    <input type="text" id="name" name="name"><br><br>
-                
-                    <label for="email">Email:</label>
-                    <input type="email" id="email" name="email"><br><br>
-                
-                    <label for="your-message">Your Message:</label><br><br>
-                    <textarea id="your-message" name="your-message" rows="4" cols="50"></textarea><br><br>
-                
-                    <input type="submit" value="Submit">
-                </form>                
-                
-                <div id="Ready to Wear"></div>
-            </div>
-        </div>
-    </div>
-    <script src="Mo.scripts.js"></script>
-</body>
 
+    <h3>Welcome to Medinat Keshiro World</h3>
+    <h3>United States (USD $)</h3>
+  </header>
+
+  <!-- ─────────────────── HERO / NAV ─────────────────── -->
+  <section id="hero">
+    <video autoplay muted loop playsinline class="background-video">
+      <source src="stars.mp4" type="video/mp4" />
+      Your browser does not support the video tag.
+    </video>
+
+    <div id="logo">
+      <img src="image/logo.jpg" alt="Logo" id="logo-img" />
+    </div>
+
+    <div id="brand-name">
+      <h1>Mo Designs</h1>
+    </div>
+
+    <nav>
+      <ul id="main-menu">
+        <li class="has-sub" onclick="toggleMenu()">
+          Sort
+          <ul id="submenu">
+            <li><a href="#ready-section">Ready to Wear</a></li>
+            <li><a href="#customized-section">Customize Wear</a></li>
+            <li><a href="#collections-section">Our Collections</a></li>
+          </ul>
+        </li>
+        <li><a href="#about-section">About</a></li>
+        <li><a href="#contact-section">Contact</a></li>
+      </ul>
+    </nav>
+  </section>
+
+  <!-- ─────────────────── MAIN CONTENT ─────────────────── -->
+  <main id="details">
+    <div id="background-image-container"></div>
+
+    <div id="content-container">
+      <!-- LEFT COLUMN ---------------------------------------------------- -->
+      <div class="column large">
+        <div id="datetime-location"></div>
+
+        <!-- About -->
+        <section id="about-section">
+          <h2 class="section-title ta">About Us</h2>
+          <p class="contact-list">
+            Mo International Designs! At Mo Designs we believe every baby deserves the best
+            and every woman is a queen who deserves affordable, high‑quality options.
+            We specialize in <span>excellent and creative designs with a perfect sew</span>.
+            As passionate designers, we craft outfits tailored perfectly to each individual,
+            blending elegant American trends with rich African styles. Whether you need a
+            glamorous party dress, a casual outfit, or bespoke cultural attire, Mo Designs
+            will make you feel confident, beautiful, and authentically yourself.
+          </p>
+        </section>
+
+        <!-- Dynamic sections loaded by JS -->
+        <button class="section-btn" onclick="loadReady()">Ready to Wear</button>
+        <div id="ready-section"></div>
+
+        <button class="section-btn" onclick="loadCollections()">Our Collections</button>
+        <div id="collections-section"></div>
+
+        <button class="section-btn" onclick="loadCustomized()">Customized</button>
+        <div id="customized-section"></div>
+      </div>
+
+      <!-- MIDDLE COLUMN -------------------------------------------------- -->
+      <div class="column">
+        <section id="contact-section">
+          <h2 class="section-title ta">Contact Us</h2>
+          <ul class="contact-list">
+            <li><strong>Address:</strong><br />
+              268 Aspen Knols Way<br />
+              Staten Island, New York, U.S.A
+            </li>
+            <li>
+              <a href="tel:13475964919" target="_blank" aria-label="Call">
+                <img src="image/call-icon.png" alt="Call" width="30" />
+              </a>
+              <a id="email-link" aria-label="Email">
+                <img src="image/mail-icon.png" alt="Email" width="30" />
+              </a>
+            </li>
+          </ul>
+
+          <div class="social-m">
+            <h3>Business Hours</h3>
+            <ul class="contact-list business-hours">
+              <li>Mon‑Fri: 9 am – 7 pm</li>
+              <li>Sat: 9 am – 8 pm</li>
+              <li>Sun: Closed</li>
+            </ul>
+
+            <h3>Frequently Asked Questions</h3>
+            <ul class="contact-list fq">
+              <li><strong>Q:</strong> Do you offer home delivery?<br />
+                <strong>A:</strong> Yes, we provide convenient home delivery.
+              </li>
+              <li><strong>Q:</strong> How can I track my order?<br />
+                <strong>A:</strong> You’ll receive a tracking number via email once shipped.
+              </li>
+            </ul>
+          </div>
+
+          <h3>Our Location</h3>
+          <div id="map"></div>
+        </section>
+      </div>
+
+      <!-- RIGHT COLUMN --------------------------------------------------- -->
+      <div class="column">
+        <form action="Mo.php" method="post">
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+
+          <label for="your-message">Your Message:</label>
+          <textarea id="your-message" name="your-message" rows="4" required></textarea>
+
+          <input type="submit" value="Submit" />
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+<script defer src="Mo.scripts.js"></script>
 </html>

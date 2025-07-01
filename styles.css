@@ -1,323 +1,269 @@
+/* ─────────── Key Animations ─────────── */
 @keyframes combinedAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(100px) rotate(-90deg) scale(0.5);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(0) rotate(0) scale(1);
-    }
-
-    70% {
-        transform: translateY(-50px) rotate(0) scale(1.2);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(-200px) rotate(90deg) scale(0.2);
-    }
-}
-
-body {
-    margin: 0;
-    padding: 0;
-}
-
-#header {
-    position: relative;
-    width: 100%;
-    height: 150px;
-    display: flex;
-    border: 3px solid purple;
-    justify-content: space-between;
-    align-items: center;
-    padding: 0;
-    overflow: hidden;
-}
-
-.background-video {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-    z-index: -1;
-}
-
-#logo,
-#pics,
-#tdiv {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1;
-}
-
-#logo {
-    width: 170px;
-    height: 100px;
-    margin: 0 20px;
-}
-
-#logo-img {
-    width: 150px;
-    height: 140px;
-    margin-left: 0;
-    opacity: 0.4;
-    transition: opacity 0.4s ease;
-}
-
-#logo-img:hover {
-    opacity: 1;
-}
-
-#tdiv {
-    margin-top: 10px;
-    margin-bottom: 11px;
-    width: 70%;
-    height: 150px;
-    background-image: url('mo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    transition: background-size 0.5s ease, background-position 0.5s ease;
-}
-
-#tdiv:hover {
-    background-size: contain;
-    background-position: center;
-}
-
-#tdiv h1 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-style: italic;
-    font-weight: bolder;
-    font-size: 70px;
-    color: red;
-    letter-spacing: 2px;
-    animation: combinedAnimation 10s infinite;
-}
-
-#main-menu {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    flex-direction: column;
-}
-
-#main-menu li {
-
-    border: 2px solid green;
-    border-radius: 2px;
-    padding: 2px;
-    color: pink;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    cursor: pointer;
-    position: relative;
-    margin-right: 10px;
-}
-
-
-#main-menu a {
-    color: inherit;
-    text-decoration: none;
-}
-
-#submenu {
-    list-style-type: none;
-    color: blue;
-    display: none;
-    position: relative;
-    top: 100%;
-    left: 0;
-    background-color: #333;
-    padding: 0;
-    margin: 0;
-}
-
-#submenu li {
-    padding: 5px 10px;
-    color: yellow;
-    
-
-}
-
-#submenu li:hover {
-    background-color: #444;
-}
-
-#details {
-    width: 100%;
-    position: relative;
-    overflow: hidden;
-}
-
-#background-image-container {
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-image: url('image/logo.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    z-index: -1;
-    opacity: 0.2;
-}
-
-#content-container {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    z-index: 1;
-}
-
-.column {
-    width: 20%;
-    padding: 20px;
-    box-sizing: border-box;
-    border: 2px dashed pink;
-    margin-bottom: 20px;
-}
-
-.column.large {
-    width: 50%;
-}
-
-h2 {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 24px;
-    color: purple;
-    text-align: center;
-}
-
-form {
-    display: flex;
-    flex-direction: column;
-}
-
-form label,
-form input,
-form textarea {
-    margin-bottom: 10px;
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-}
-
-.ta {
-    text-align: left;
-}
-
-.section-title {
-    margin-bottom: 0px;
-}
-
-.contact-list {
-    margin-top: 0px;
-    margin-left: 20px;
-    padding: 0;
-}
-
-.contact-list li {
-    margin-bottom: 1px;
-}
-
-span {
-    font-style: italic;
-    color: red;
-}
-
-h3 {
-    font-size: medium;
-    color: purple;
-}
-
-.social-m {
-    background-color: pink;
+  0%   { opacity: 0; transform: translateY(100px) rotate(-90deg) scale(0.5); }
+  50%  { opacity: 1; transform: translateY(0)    rotate(0)     scale(1); }
+  70%  { transform: translateY(-50px) rotate(0)  scale(1.2); }
+  100% { opacity: 0; transform: translateY(-200px) rotate(90deg) scale(0.2); }
 }
 
 @keyframes textAnimation {
-    0% {
-        opacity: 0;
-        transform: translateY(-10px);
-    }
-
-    50% {
-        opacity: 1;
-        transform: translateY(0);
-    }
-
-    100% {
-        opacity: 0;
-        transform: translateY(10px);
-    }
+  0%   { opacity: 0; transform: translateY(-10px); }
+  50%  { opacity: 1; transform: translateY(0); }
+  100% { opacity: 0; transform: translateY(10px); }
 }
 
-#datetime-location {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 20px;
-    color: green;
-    text-align: center;
-    margin-top: 0;
-    animation: textAnimation 5s infinite;
-    transition: all 0.5s ease-in-out;
+/* ─────────── Globals ─────────── */
+* {
+  box-sizing: border-box;
 }
 
-#map {
-    width: 100%;
-    height: 300px;
-    margin-top: 10px;
+body {
+  margin: 0;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  padding-bottom: 100px; /* ensures dropdowns aren't cut off */
 }
 
+h1, h2 {
+  margin: 0;
+}
+
+/* ─────────── Top Header ─────────── */
+#top-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 40px;
+  padding-right: 1%;
+  background: yellow;
+}
+
+.social-icons img {
+  vertical-align: middle;
+}
+
+/* ─────────── Hero Section ─────────── */
+#hero {
+  position: relative;
+  height: 150px;
+  border: 3px solid purple;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  overflow: visible;
+}
+
+.background-video {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1;
+}
+
+#logo {
+  width: 170px;
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#logo-img {
+  width: 150px;
+  height: 140px;
+  opacity: 0.4;
+  transition: opacity .4s ease;
+}
+
+#logo-img:hover {
+  opacity: 1;
+}
+
+#brand-name {
+  width: 70%;
+  height: 150px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: url('mo.jpg') center/cover no-repeat;
+  transition: background-size .5s ease, background-position .5s ease;
+}
+
+#brand-name:hover {
+  background-size: contain;
+}
+
+#brand-name h1 {
+  font-style: italic;
+  font-weight: 700;
+  font-size: 70px;
+  color: red;
+  letter-spacing: 2px;
+  animation: combinedAnimation 10s infinite;
+}
+
+/* ─────────── Navigation ─────────── */
+nav {
+  margin-right: 10px;
+}
+
+#main-menu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;            /* horizontal on desktop */
+  gap: 5px;
+}
+
+#main-menu li {
+  position: relative;
+  border: 2px solid green;
+  border-radius: 2px;
+  padding: 2px 6px;
+  color: pink;
+  cursor: pointer;
+  overflow: visible;         /* ensure dropdown can extend */
+}
+
+#main-menu a {
+  color: inherit;
+  text-decoration: none;
+}
+
+/* Sub‑menu */
+#submenu {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  position: absolute;
+  top: calc(100% + 4px);      /* small gap below parent item */
+  left: 0;
+  background: #333;
+  display: none;              /* toggled via JS */
+  z-index: 1000;
+  min-width: 160px;
+}
+
+#submenu li {
+  padding: 6px 12px;
+  color: yellow;
+  white-space: nowrap;
+}
+
+#submenu li:hover {
+  background: #444;
+}
+
+/* ─────────── Background Overlay ─────────── */
+#details {
+  position: relative;
+  width: 100%;
+}
+
+#background-image-container {
+  position: absolute;
+  inset: 0;
+  background: url('image/logo.jpg') center/cover no-repeat;
+  opacity: .2;
+  z-index: -1;
+}
+
+/* ─────────── Main Content Layout ─────────── */
+#content-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.column {
+  width: 20%;
+  padding: 20px;
+  margin-bottom: 20px;
+  border: 2px dashed pink;
+}
+
+.column.large {
+  width: 50%;
+}
+
+/* ─────────── Typography & Sections ─────────── */
+.section-title {
+  margin-bottom: 0;
+  color: purple;
+  text-align: center;
+}
+
+.contact-list {
+  margin: 0 0 10px 20px;
+  padding: 0;
+}
+
+.contact-list li {
+  margin-bottom: 4px;
+}
+
+.section-btn {
+  display: block;
+  width: 100%;
+  margin: 12px 0;
+  padding: 8px 0;
+  background: purple;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+span {
+  font-style: italic;
+  color: red;
+}
+
+#datetime-location,
 #newArrivals {
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
-    font-size: 24px;
-    color: red;
-    text-align: center;
-    margin-top: 0;
-    animation: textAnimation 5s infinite;
-    transition: all 0.5s ease-in-out;
-    font-style: italic;
+  text-align: center;
+  font-size: 20px;
+  color: green;
+  margin-bottom: 10px;
+  animation: textAnimation 5s infinite;
 }
 
-/* Responsive Styles */
-@media only screen and (max-width: 768px) {
-    #header {
-        flex-direction: column;
-        height: auto;
-    }
-
-    #tdiv {
-        width: 100%;
-    }
-
-    #main-menu {
-        flex-direction: column;
-    }
-
-    #content-container {
-        flex-direction: column;
-    }
-
-    .column {
-        width: 100%;
-    }
-
-    .column.large {
-        width: 100%;
-    }
-
-    h1 {
-        font-size: 30px;
-    }
+/* Map container */
+#map {
+  width: 100%;
+  height: 300px;
+  margin-top: 10px;
 }
 
-@media only screen and (max-width: 480px) {
-    h1 {
-        font-size: 30px;
-    }
+.social-m {
+  background: pink;
+  padding: 6px;
+}
+
+/* ─────────── Responsive ─────────── */
+@media (max-width: 768px) {
+  #hero {
+    flex-direction: column;
+    height: auto;
+  }
+
+  #brand-name {
+    width: 100%;
+  }
+
+  #main-menu {
+    flex-direction: column;   /* stacked nav on mobile */
+    gap: 0;
+  }
+
+  #content-container,
+  .column,
+  .column.large {
+    width: 100%;
+  }
+
+  #brand-name h1 {
+    font-size: 40px;
+  }
 }

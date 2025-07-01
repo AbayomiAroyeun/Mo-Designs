@@ -1,83 +1,102 @@
-function toggleMenu() {
-    var submenu = document.getElementById('submenu');
-    submenu.style.display = submenu.style.display === 'block' ? 'none' : 'block';
+/* ───────────  Menu toggle ─────────── */
+function toggleMenu(forceClose = false) {
+  const submenu = document.getElementById('submenu');
+
+  if (forceClose) {
+    submenu.classList.remove('open');
+    submenu.style.display = 'none';
+    return;
+  }
+
+  submenu.classList.toggle('open');
+  submenu.style.display = submenu.classList.contains('open') ? 'block' : 'none';
 }
 
-// Function to display the current date, time, and location
+/* ───────────  Date / Time ─────────── */
 function displayDateTimeLocation() {
-    const dateTimeLocation = document.getElementById('datetime-location');
-    const now = new Date();
-
-    // Options for formatting date and time
-    const options = { 
-        weekday: 'long', 
-        year: 'numeric', 
-        month: 'long', 
-        day: 'numeric', 
-        hour: '2-digit', 
-        minute: '2-digit', 
-        second: '2-digit' 
-    };
-    dateTimeLocation.innerHTML = now.toLocaleDateString('en-US', options);
+  const el  = document.getElementById('datetime-location');
+  const now = new Date();
+  el.textContent = now.toLocaleDateString('en-US', {
+    weekday : 'long',  year  : 'numeric', month : 'long',  day   : 'numeric',
+    hour     : '2-digit', minute: '2-digit', second: '2-digit'
+  });
 }
 
-// Initialize and add the map
+/* ───────────  Google Maps ─────────── */
 function initMap() {
-    const storeLocation = { lat: 7.3775, lng: 3.8964 }; // Coordinates for NNPC Depot Junction, Abeokuta Road, Apata, Ibadan
+  const store = { lat: 7.3775, lng: 3.8964 };
+  const map   = new google.maps.Map(document.getElementById('map'), {
+    zoom : 15,
+    center: store
+  });
+  new google.maps.Marker({ position: store, map });
 
-    const map = new google.maps.Map(document.getElementById("map"), {
-        zoom: 15,
-        center: storeLocation
+  if (navigator.geolocation) {
+    navigator.geolocation.getCurrentPosition(pos => {
+      const user = { lat: pos.coords.latitude, lng: pos.coords.longitude };
+      new google.maps.Marker({ position: user, map, label: 'You are here' });
+      map.setCenter(user);
     });
-
-    const marker = new google.maps.Marker({
-        position: storeLocation,
-        map: map
-    });
-
-    if (navigator.geolocation) {
-        navigator.geolocation.getCurrentPosition((position) => {
-            const userLocation = {
-                lat: position.coords.latitude,
-                lng: position.coords.longitude
-            };
-
-            // Add a marker for the user's location
-            const userMarker = new google.maps.Marker({
-                position: userLocation,
-                map: map,
-                label: "You are here"
-            });
-
-            // Center the map to the user's location
-            map.setCenter(userLocation);
-        });
-    } else {
-        alert("Geolocation is not supported by this browser.");
-    }
+  }
 }
 
-// Load the map script
 function loadMapScript() {
-    const script = document.createElement('script');
-    script.src = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBc6PlrLvw02_VLYzvF0AlJPqUxNjd8Abc&callback=initMap`;
-    script.async = true;
-    script.defer = true;
-    document.head.appendChild(script);
+  const script = document.createElement('script');
+  /* TODO: replace YOUR_API_KEY with a valid key (billing enabled) */
+  script.src   = 'https://maps.googleapis.com/maps/api/js?key=YOUR_API_KEY&callback=initMap';
+  script.async = true;
+  script.defer = true;
+  document.head.appendChild(script);
 }
 
-// Display date, time, and location on page load
-window.onload = () => {
-    displayDateTimeLocation();
-    loadMapScript();
-};
+/* ───────────  Dynamic sections with show/hide ─────────── */
+function toggleSection(sectionId, url) {
+  const section = document.getElementById(sectionId);
 
-function collection(){
+  /* Already loaded once? just toggle visibility */
+  if (section.dataset.loaded === 'true') {
+    section.style.display = section.style.display === 'none' ? '' : 'none';
+    return;
+  }
 
-};
-function customized(){
-    
-};
-function ready(){
-    
-};
+  /* First time → fetch file, insert, mark as loaded */
+  fetch(url)
+    .then(r => r.text())
+    .then(html => {
+      section.innerHTML     = html;
+      section.dataset.loaded = 'true';
+    });
+}
+
+function loadReady() {
+  toggleSection('ready-section', 'readyTowear.html');
+  toggleMenu(true);        // close submenu
+}
+
+function loadCollections() {
+  toggleSection('collections-section', 'collection.html');
+  toggleMenu(true);
+}
+
+function loadCustomized() {
+  toggleSection('customized-section', 'customized.html');
+  toggleMenu(true);
+}
+
+/* ───────────  Spam‑safe email link ─────────── */
+function buildEmail() {
+  const user  = 'mkdesignsbymo';
+  const dom   = 'gmail.com';
+  const email = `${user}@${dom}`;
+  const link  = document.getElementById('email-link');
+  link.href   = `mailto:${email}`;
+  link.textContent = email;      // fallback for users with CSS disabled
+}
+
+/* ───────────  Init on load ─────────── */
+window.addEventListener('load', () => {
+  displayDateTimeLocation();
+  buildEmail();
+  loadMapScript();
+});
+
