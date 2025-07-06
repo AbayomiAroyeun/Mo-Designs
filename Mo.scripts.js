@@ -86,7 +86,7 @@ window.addEventListener('load',()=>{
 
   /* gallery */
   renderWear();
-  setInterval(nextWear,6000);
+  setInterval(nextWear,1000);
   document.getElementById('wear-display').addEventListener('click',e=>{
     if(e.target.tagName==='IMG'){
       wearIndex=Number(e.target.dataset.idx); renderWear(); openModal(wearIndex);
