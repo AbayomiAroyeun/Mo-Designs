@@ -93,6 +93,10 @@ span{font-style:italic;color:red}
   #social-section .contact-list li{
   overflow-wrap:anywhere;    /* aka word-wrap:break-word; */
   word-break:break-word;     /* last‑resort break if NBSPs remain */
+  #wear-buttons{display: flex;
+    gap: 10px;
+  align-content: center;
+  justify-self: center;}
   }
 
   /* move social icons to bottom & hide from header flow */
