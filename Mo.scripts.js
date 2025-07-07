@@ -115,8 +115,9 @@ function loadCustomized(scroll = false){
 function buildEmail(){
   const email = 'mkdesignsbymo@gmail.com';
   const link  = document.getElementById('email-link');
-  link.href        = `mailto:${email}`;
-  link.textContent = email;
+  link.href = `mailto:${email}`;     // still wires the link
+  // link.textContent = email;       // ← delete or comment this
+
 }
 
 /* =========================================================
