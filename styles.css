@@ -13,7 +13,7 @@ body{margin:0;font-family:'Franklin Gothic Medium','Arial Narrow',Arial,sans-ser
 #logo{width:170px;height:100px;display:flex;justify-content:center;align-items:center}
 #logo-img{width:150px;height:100px;opacity:.4;transition:opacity .4s ease}
 #logo-img:hover{opacity:1}
-#brand-name h1{font-style:italic;font-weight:700;font-size:30px;color:white;letter-spacing:2px;animation:combinedAnimation 10s infinite}
+#brand-name h3{font-style:italic;font-weight:700;font-size:20px;color:white;letter-spacing:2px;animation:combinedAnimation 10s infinite}
 
 /* ─────────── Navigation ─────────── */
 nav{margin-right:10px}
@@ -36,15 +36,15 @@ nav{margin-right:10px}
 #wear-display{display:flex;gap:8px;justify-content:center;align-items:center;flex-wrap:nowrap;overflow-x:auto;width:100%;max-width:100%;height:260px;margin:25px 0;border:3px solid #DAA520;border-radius:6px}
 #wear-display img{flex:0 0 22%;max-height:160px;object-fit:cover;cursor:pointer;opacity:.4;transition:opacity .35s ease,transform .35s ease}
 #wear-display img.active{opacity:1;transform:scale(1.05)}
-@media(max-width:480px){#wear-display img{max-height:90px;flex:0 0 25%}}
+@media(max-width:480px){#wear-display img{max-height:100%;flex:0 0 25%}}
 
 /* ─────────── Buttons under gallery ─────────── */
 #wear-buttons{display:flex;justify-content:center;gap:14px;margin-bottom:10px;flex-wrap:wrap}
 .section-btn{padding:8px 14px;background:purple;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:14px}
 
 /* ─────────── Columns / Layout ─────────── */
-#content-container{display:flex;flex-wrap:wrap;justify-content:space-between}
-.column{width:20%;padding:20px;margin-bottom:20px;border:2px dashed pink}
+#content-container{display:flex;flex-wrap:wrap;justify-content: space-between;}
+.column{width:20%;padding:20px;margin-bottom:0px;border:2px dashed pink}
 .column.large{width:50%}
 .section-title{margin-bottom:0;color:purple;text-align:center}
 .contact-list{margin:0 0 10px 20px;padding:0}
@@ -88,7 +88,7 @@ span{font-style:italic;color:red}
   #brand-name{width:100%}
   #brand-name h1{font-size:24px}
   #main-menu{flex-direction:column}
-  .column,.column.large{width:100%;padding:10px}
+  .column,.column.large{width:100%;padding:0px}
   #logo-img{width:100px;height:90px}
   #social-section .contact-list li{
   overflow-wrap:anywhere;    /* aka word-wrap:break-word; */
