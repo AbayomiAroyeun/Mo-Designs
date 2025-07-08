@@ -43,7 +43,7 @@ nav{margin-right:10px}
 .section-btn{padding:8px 14px;background:purple;color:#fff;border:none;border-radius:4px;cursor:pointer;font-size:14px}
 
 /* ─────────── Columns / Layout ─────────── */
-#content-container{display:flex;flex-wrap:wrap;justify-content: space-between;}
+#content-container{display:flex;flex-wrap:wrap;gap: 12px; }
 .column{width:20%;padding:20px;margin-bottom:0px;border:2px dashed pink}
 .column.large{width:50%}
 .section-title{margin-bottom:0;color:purple;text-align:center}
@@ -76,7 +76,7 @@ span{font-style:italic;color:red}
   100% {opacity:1;   color:#ffde59; transform:scale(1);}
 }
 .welcome{
-  animation: welcomeFadeColors 6s ease-in-out infinite;
+  animation: welcomeFadeColors 15s ease-in-out infinite;
 }
 /* less motion */
 @media (prefers-reduced-motion: reduce){.welcome{animation: none;}}
